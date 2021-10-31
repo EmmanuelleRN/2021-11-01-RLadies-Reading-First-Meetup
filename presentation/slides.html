@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>RLadies Reading</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# RLadies Reading
+## First Meetup
+### October, 2021
+
+---
+
+background-image: logo.png
+background-position: top right
+background-size: 110px 120px
+layout: true
+---
+
+class: center, middle
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 100px;
+height: 128px;
+z-index: 0;
+background-image: url(www/logo.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+&lt;style&gt;
+b, strong {
+    font-weight: bolder;
+    color: purple;
+}
+&lt;/style&gt;
+
+# Welcome
+
+Whether you are an R novice or R expert, this group is for you!
+
+---
+
+
+
+
+# Code of Conduct
+
+**Everyone** participating must agree on the code of conduct.
+
+.bg-light-purple.b--purple.ba.bw2.br3.shadow-5.ph4.mt5[
+R-Ladies is dedicated to providing a harassment-free experience for everyone. We do not tolerate harassment of participants in any form.
+]
+
+Read the full-version here: https://rladies.org.code-of-conduct/
+
+Ensures that environment of meetup stays **safe** and **friendly**
+
+---
+
+class: center, middle
+
+# What is R-Ladies?
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left[
+
+&lt;img src="www/rladies.png"/&gt;
+
+]
+
+.pull-right[
+
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 28px;
+    padding: 1em 4em 1em 4em;
+}
+&lt;/style&gt;
+
+&lt;br&gt;
+
+**Worldwise** organization that promotes **gender diversity** in the R-community via **meetups** and **mentorship** in a **friendly** and **safe** environment.
+
+]
+
+---
+
+class: center, middle
+
+background-image: url("www/currently.png")
+background-size: contain
+
+---
+
+# Our mission
+
+&gt; **Promote gender diversity in the R-community**
+
+**Why?** **Underrepresentation** of women in the R community
+
+**Where?** Lack of female **leaders**, package **developers**, conference **speakers** and **participants**, **teachers** and **users**!
+
+&gt; Note that all references to women/female in this presentation are usefully inclusively w.r.t. Trans women, genderqueer women and non-binary people who are significantly female identified
+
+---
+
+# Our mission
+
+**Goal**
+* Achieve proportionate representation by **Encouraging**, **Inspiring**, **Empowering** current minorities.
+
+**How?**
+* **Support** R enthusiasts to achieve their programming potential.
+* Building a **local and global collaborative network** of R leaders, mentors, learners and developers to facilitate individual and collective progress
+
+---
+
+# Pland for R-Ladies Reading
+
+Aim to:
+
+* Hosts meetups that you would like, and on topics that you might be interested
+
+* Plan for now: monthly
+
+* Varying R proficiency levels
+
+* Promote exchange and networking within and outside the community
+
+---
+
+class: middle, center
+
+# R Language
+
+---
+
+# What is R?
+
+* Statistical computing and graphics programming language and environment
+
+* Leading tool for Machine Learning, Statistics and Data Analysis
+
+* Free open source alternative to Matlab, Excel, SAS, SPSS, Minitab, etc
+
+* Maintained and developed by a community of developers
+
+---
+
+# Why learn R?
+
+* Rapid growing community
+
+* Most comprehensive statistical package
+
+* Variety of topic specific packages (from health to finance)
+
+* Tools for visualization, reporting and interactivity
+
+* Can easily be ported between Mac, Unix and Windows
+
+---
+
+# Why learn R?
+
+* Capable of executing code written in other languages such as Java and C++
+
+* Free and open source
+
+* Facilitate collaboration
+
+* Great community support
+
+---
+
+class: center, middle
+
+# Intro to R using RStudio
+
+Open the file `tutorial - Intro to R.R` from tutorial folder
+
+---
+
+# RStudio
+
+&lt;center&gt;&lt;img src="www/rstudio.png"/&gt;&lt;/center&gt;
+
+---
+
+# RStudio
+
+Some tips before we start
+
+* shortcut for running a line of code :    ctrl + enter 
+* shortcut for running the entire script:  ctrl + shift + enter
+* shortcut for `&lt;-`:                       alt + -
+
+&gt; For Mac users: Use cmnd instead of ctrl
+
+---
+
+# R as a calculator
+
+.pull-left[
+
+**Arithmetic operators:**
+
+* Addition:       +
+* Subtraction:    -
+* Multiplication: *
+* Division:       /
+* Exponentiation: ^
+* Modulus:        %%
+
+]
+
+.pull-right[
+
+**Logical operators:**
+
+* less than:             &lt;
+* less or equal than:    &lt;=
+* greater than:          &gt;
+* greater or equal than: &gt;=
+* equal to:              ==
+* not equal to:          !=
+* and:                   &amp;
+* or:                    |
+
+]
+
+---
+
+# Variables
+
+Variables can be assigned using **&lt;-** or **=**
+* **&lt;-** is considered to be the standard
+
+Variable names are case sensitive
+* Var != var
+
+Valid variable names include only letters, numbers, _ and .
+* They start with letters or .
+
+&gt; Be careful when naming your variables
+
+---
+
+# Types of data
+
+* Numeric or Integers:
+  * Quantitative information
+  * E.g.: Weight, height, count
+
+* Character
+  * String with any type of data
+  * E.g.: "Hello", "5", "one"
+
+* Factor
+  * Limited number of different values
+  * E.g.: Blood type
+  
+* Logical
+  * Represents TRUE or FALSE
+
+---
+
+# Vectors
+
+A vector is a sequence of data elements of the same basic type
+
+
+```r
+vector &lt;- c()
+```
+
+
+To index a vector: vector[index]
+
+&gt; Note that R starts counting at 1
+
+---
+
+# Data frames
+
+Create a data frame: `df &lt;- data.frame()`
+
+Access colnames and rownames: `colnames()`, `rownames()`
+
+Access number of columns and rows: `nrow()`, `ncol()`
+
+---
+
+# Plotting
+
+For quick plotting, you can use R's basic functions:
+
+`plot(numeric_x, numeric_y)`
+
+`barplot(numeric_x)`
+
+`hist(factor_x)`
+
+`boxplot(numeric_x ~ factor_y)`
+
+For more advanced plots, use the library **ggplot2**
+
+---
+
+class: center, middle
+
+# Assignment
+
+Please, open the assignment inside assignment folder
+
+---
+
+class: center, middle, inverted
+
+# Thank you!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
