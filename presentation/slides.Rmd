@@ -190,7 +190,7 @@ Open the file `tutorial - Intro to R.R` from tutorial folder
 
 # RStudio
 
-<center><img src="www/rstudio.png"/></center>
+<center><img src="www/rstudio.png" height="400px"/></center>
 
 ---
 

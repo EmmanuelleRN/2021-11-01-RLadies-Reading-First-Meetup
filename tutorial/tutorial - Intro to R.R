@@ -21,13 +21,19 @@
 4 + 5
 
 # divide 30 by 4
-
+30 / 4
 
 # use the modulus
-
+30 %% 4
 
 # use exponentiation
+2 ^ 2
 
+# subtraction
+2 - 4
+
+# Check if 4 equals to 5
+4 == 5
 
 ############################################  Variables  #############################################
 
@@ -38,31 +44,35 @@
 # assign 30 to the variable x
 x = 30
 x <- 30
+X <- 30
 
 # print out x
 x <- 5
+print(x)
 
 # divide x by 5
 x / 5
 
 # if you assign a new value to x, the old value is lost
-x <- # fill out
+x <- 8# fill out
 
   # add one to x and save as x
   x <- x + 1
 
 # multiply x by 5 and save as y
-y <-
+y <- 5 * x
+print(y)
 
   # print out x
 
 
-  # now, imagine you want to organize your day in the most efficient way
-  hours_in_a_day <- 24
-hours_of_sleep <- #fill out
+# now, imagine you want to organize your day in the most efficient way
+hours_in_a_day <- 24
+hours_of_sleep <- 6#fill out
 
-  #calculate hours awake by substracting hours_of_sleep from hours_in_a_day
-  hours_awake <-
+#calculate hours awake by substracting hours_of_sleep from hours_in_a_day
+  (hours_awake <- hours_in_a_day - hours_of_sleep)
+hours_awake
 
   #print hours_awake
 
@@ -71,13 +81,13 @@ hours_of_sleep <- #fill out
   ########################################  Types of Data  #########################################
 
 # Set my_numeric to be 12
-my_numeric <-
+my_numeric <- 12
 
   # Set my_character to be "R-ladies"
-  my_character <-
+  my_character <- "R-Ladies"
 
   # Set my_logical to be FALSE
-  my_logical <-
+  my_logical <- FALSE
 
   # check the class of a variable
   ?class
@@ -89,7 +99,8 @@ class(my_logical)
 ?c
 
 # vector of weekdays
-weekdays_vector <- c('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday')
+weekdays_vector <- c('Monday','Tuesday','Wednesday','Thursday','Friday',
+                     'Saturday','Sunday')
 
 # vector of hours per day
 ?rep
@@ -97,14 +108,14 @@ hours_per_weekday_vector <- rep(hours_in_a_day,7)
 print(hours_per_weekday_vector)
 
 # vector of hours of sleep per day
-hours_sleep_per_weekday_vector <-
+hours_sleep_per_weekday_vector <- rep(6, 7)
 
 
   # vector of hours working per day
   hours_work_per_weekday_vector <- c(4,8,8,8,6,0,0)
 
 # vector of other things you do on each weekday (e.g. sports, dinner)
-hours_other_per_weekday_vector <- c(...)
+hours_other_per_weekday_vector <- c(NA, "", "belly dance", "zumba")
 
 # total number of hours in a week
 ?sum
@@ -121,42 +132,47 @@ work_hours_per_week <-
 # let's combine these vectors into a data frame
 ?data.frame
 my_week_df <- data.frame(weekdays_vector,
-                        hours_per_weekday_vector,
-                        hours_sleep_per_weekday_vector,
-                        hours_work_per_weekday_vector,
-                        hours_other_per_weekday_vector)
+                        hours_per_weekday_vector)
 
 # check out the dataframe
 View(my_week_df)
 
 # check out the first rows in your df
 ?head
-head(my_week_df, n = 3)
+head(my_week_df, n = 20)
 
 # let's rename the columns
 colnames(my_week_df) #before adjusted
-colnames(my_week_df) <- c('day','total_hours','sleep_hours','work_hours','other_hours')
+colnames(my_week_df) <- c('day','total_hours')
 colnames(my_week_df) #after adjusted
 # select data to look at it
 # indexing works like this : data[row,column]
 
+my_new_df <- data.frame("Hello" = c(1:5),
+                        "Goodbye" = c(10:14))
+
 # if you want to select columns
-my_week_df$sleep_hours
-my_week_df['sleep_hours']
-my_week_df[,'sleep_hours']
+my_week_df$day
+my_week_df['day']
+my_week_df[,'day']
 my_week_df[,2]
+
+df[row, column]
 
 # if you want to select rows
 my_week_df[2,]
 rownames(my_week_df)
 my_week_df['2',]
+my_week_df['Monday',]
+
+rownames(my_week_df) <- weekdays_vector
 
 # select only weekend rows
 my_weekend_df <- my_week_df[is.element(my_week_df$day, c('Saturday','Sunday')),]
 my_weekend_df
 
 # select specific columns
-my_week_df[,c(1,3:4)]
+my_week_df[,c(1:2)]
 
 
 # calculate free hours in a day
@@ -181,7 +197,7 @@ my_week_df[...]
 View(my_week_df)
 
 ########################################  Plotting  #########################################
-plot(my_week_df$day,my_week_df$free_hours)
+plot(1:7,my_week_df$total_hours)
 ?plot
 
 # correct the order of the days
