@@ -7,7 +7,7 @@ current_dir <- "..."
 setwd(current_dir)
 
 # Read a sample csv file and check the output
-filename <- "sample_file.csv"
+filename <- "sample.csv"
 sample_file <- read.table(file.path(current_dir, filename, fsep="/"))
 
 # ? Check what is inside the variable sample_file
