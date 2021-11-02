@@ -21,13 +21,13 @@ sample
 
 # Now we move to a more complicated example: titanic dataset. Let's try to play with it!
 # More information can be found here: https://www.kaggle.com/c/titanic
-titanic_filename <- "titanic_train_ch.txt"
+titanic_filename <- "titanic_train.txt"
 titanic_df <- read.table(file.path(current_dir, titanic_filename, fsep="/"))
 
 # Most of the time data files are messy and we need to figure out how to handle it.
 # ? Fix reading error by checking out the file header and separator used in this dataset. You also probably need to change the file as well.
 ?read.table
-titanic_df <- read.table(file.path(current_dir, "titanic_train_ch1.txt", fsep="/"), header=T, sep=",")
+titanic_df <- read.table(file.path(current_dir, "titanic_train.txt", fsep="/"), header=T, sep=",")
 
 # ? Check the first 20 values of the data frame
 # Tip: head(...)
@@ -35,7 +35,7 @@ head(titanic_df, 20)
 
 # ? The file is actually a csv file, for which it is better to use read.csv function.
 # Try it with just filename as a parameter and compare the output with read.table
-titanic_df <- read.csv(file.path(current_dir, "titanic_train_ch.txt", fsep="/"))
+titanic_df <- read.csv(file.path(current_dir, "titanic_train.txt", fsep="/"))
 
 # ? Check the dimensions of the data frame
 # Tip: dim(..)
